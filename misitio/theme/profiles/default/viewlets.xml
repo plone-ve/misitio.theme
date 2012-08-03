@@ -1,43 +1,112 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration of the viewlet managers
-     for the "Misitio Theme" skin.
-     -->
-
 <object>
-
-  <!-- Viewlets keep the same ordering than the default skin ('Plone Default'
-       out of the box).
-       You can specify skinname="*" if you want changes apply for all skins.
-       Using "True"" for the 'make-default' parameter will make the 'skinname'
-       value set as default skinname. Means the name of the skin that would be
-       used in case the viewlets ordering was not specified for the currently
-       used skin.
-       The 'based-on' attribute lets you inherit the viewlets ordering from an
-       existing skin.
-       -->
-  <order manager="plone.portalfooter" skinname="Misitio Theme"
-         based-on="Plone Default">
-    <!-- The definition of a viewlet accepts these parameters:
-         - name: quite self explanatory, the name of the viewlet.
-         - insert-before: name of the viewlet before which it must be added or
-           moved.
-         - insert-after: name of the viewlet after which it must be added
-           or moved.
-         - remove: supported but rarely needed, removes the viewlet from the
-           ordering list (doesn't mean that it hides the viewlet).
-         Note: insert-before and -after accept the value "*" which means
-         "all".
-         -->
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-    <viewlet name="misitio.someviewlet"
-             insert-before="*" />
--->
-  </order>
-
-  <hidden manager="plone.portalheader" skinname="Misitio Theme">
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-    <viewlet name="plone.global_sections" />
--->
-  </hidden>
-
+ <order manager="plone.htmlhead" skinname="Plone Classic Theme">
+  <viewlet name="plone.resourceregistries"/>
+  <viewlet name="glowormHtmlHeadIncludes"/>
+ </order>
+ <order manager="gloworm.glowormPanel" skinname="Plone Classic Theme">
+  <viewlet name="glowormPanelHeader"/>
+  <viewlet name="glowormPanelBody"/>
+  <viewlet name="glowormPanelNavTree"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Plone Classic Theme">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.portaltop" skinname="Plone Classic Theme">
+  <viewlet name="plone.header"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="plone.path_bar"/>
+ </order>
+ <order manager="plone.abovecontent" skinname="Plone Default">
+  <viewlet name="plone.path_bar"/>
+ </order>
+ <order manager="plone.belowcontent" skinname="Plone Default">
+  <viewlet name="plone.belowcontenttitle.keywords"/>
+  <viewlet name="plone.nextprevious"/>
+  <viewlet name="plone.manage_portlets_fallback"/>
+ </order>
+ <order manager="plone.htmlhead" skinname="Plone Default">
+  <viewlet name="plone.resourceregistries"/>
+  <viewlet name="glowormHtmlHeadIncludes"/>
+ </order>
+ <order manager="plone.belowcontentbody" skinname="Plone Default">
+  <viewlet name="plone.belowcontentbody.relateditems"/>
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="Plone Default">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+  <viewlet name="plone.site_actions"/>
+ </order>
+ <order manager="gloworm.glowormPanel" skinname="Plone Default">
+  <viewlet name="glowormPanelHeader"/>
+  <viewlet name="glowormPanelBody"/>
+  <viewlet name="glowormPanelNavTree"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Plone Default">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.portaltop" skinname="Plone Default">
+  <viewlet name="plone.header"/>
+ </order>
+ <order manager="plone.contentviews" skinname="Plone Default">
+  <viewlet name="plone.contentviews"/>
+  <viewlet name="plone.contentactions"/>
+ </order>
+ <order manager="plone.htmlhead" skinname="Misitio Theme">
+  <viewlet name="plone.resourceregistries"/>
+  <viewlet name="glowormHtmlHeadIncludes"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="Misitio Theme">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+  <viewlet name="plone.site_actions"/>
+ </order>
+ <order manager="gloworm.glowormPanel" skinname="Misitio Theme">
+  <viewlet name="glowormPanelHeader"/>
+  <viewlet name="glowormPanelBody"/>
+  <viewlet name="glowormPanelNavTree"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Misitio Theme">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="plone.global_sections"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
+ </order>
+ <hidden manager="plone.belowcontent" skinname="Plone Classic Theme">
+  <viewlet name="plone.belowcontenttitle.keywords"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="Plone Classic Theme">
+  <viewlet name="plone.site_actions"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="Plone Classic Theme">
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+ </hidden>
+ <hidden manager="plone.abovecontent" skinname="Plone Classic Theme">
+  <viewlet name="plone.path_bar"/>
+ </hidden>
+ <hidden manager="plone.portaltop" skinname="Misitio Theme"/>
+ <hidden manager="plone.portalfooter" skinname="Misitio Theme">
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.colophon"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="Misitio Theme"/>
+ <hidden manager="plone.abovecontent" skinname="Misitio Theme">
+  <viewlet name="plone.path_bar"/>
+ </hidden>
 </object>
