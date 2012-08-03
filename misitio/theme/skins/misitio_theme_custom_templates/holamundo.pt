@@ -1,0 +1,13 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xml:lang="en" lang="en">
+  <head>
+    <title>Hola Mundo</title>
+    <script language="JavaScript1.2" type="text/javascript" 
+            src="++resource++misitio.theme.javascripts/holamundo.js"></script>
+    <link type="text/css" rel="StyleSheet" href="++resource++misitio.theme.stylesheets/main.css" media="screen" title="Hola de estilo basica" /> 
+  </head>
+  <body>
+    <h2>Hola Mundo</h2>
+    <p id="holamundo">¡haga <a href="#" onclick="holamundo()">click</a> para probar!</p>
+  </body>
+</html>
