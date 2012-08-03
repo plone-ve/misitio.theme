@@ -1,2 +1,8 @@
 /* Stylesheet for the 'Misitio Theme' Plone theme */
 
+#holamundo {
+    text-align:center;
+    color:red;
+    font-style:italic;
+    text-transform:uppercase;
+}
