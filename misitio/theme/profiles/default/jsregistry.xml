@@ -24,4 +24,10 @@
     enabled="True" expression=""  inline="False"/>
 -->
 
+ <javascript
+    id="++resource++misitio.theme.javascripts/holamundo.js"
+    authenticated="False" 
+    cacheable="True" compression="safe" cookable="True"
+    enabled="True" expression=""  inline="False"/>
+    
 </object>
