@@ -50,4 +50,15 @@
       layer=".interfaces.IThemeSpecific"
       />
 
+  <!-- Resource directory for javascripts
+    See misitio/theme/browser/javascripts/README.txt
+    for more information about registering javascripts as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="misitio.theme.javascripts"
+      directory="javascripts"
+      layer=".interfaces.IThemeSpecific"
+      />
+
 </configure>
